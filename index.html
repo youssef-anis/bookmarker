@@ -1,0 +1,106 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body>
+    <div class="home">
+      <div class="container overflow-auto">
+        <h1 class="my-5 text-center">Bookmarker</h1>
+        <hr class="dotted-line mb-4" />
+        <h2 class="fs-4 mb-5 text-center">
+          <i class="fa-solid fa-bookmark pe-1"></i>Bookmark your favourite
+          sites<i class="fa-solid fa-bookmark ps-1"></i>
+        </h2>
+
+        <div class="mb-3">
+          <label for="bookmarkname" class="form-label"
+            ><i class="fa-solid fa-book-bookmark pe-2"></i>Site name</label
+          >
+          <input
+            oninput="siteValidation(this)"
+            type="text"
+            class="form-control"
+            id="bookmarkname"
+            placeholder="Bookmark Name"
+          />
+          <div class="alert alert-danger p-1 mt-1 d-none">
+            you must enter a valid Site Name atleast 3 char to 20 char
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="siteurl" class="form-label"
+            ><i class="fa-solid fa-link pe-2"></i>Site URL</label
+          >
+          <input
+            oninput="siteValidation(this)"
+            type="url"
+            class="form-control"
+            id="siteurl"
+            placeholder="Website URL"
+          />
+          <div class="alert alert-danger p-1 mt-1 d-none">
+            you must enter a valid URL Exp : google.com
+          </div>
+        </div>
+        <div class="w-100 text-center">
+          <button onclick="addSites()" class="btn btn-success px-5 mt-2">
+            Submit
+          </button>
+        </div>
+        <hr class="my-4" />
+        <table
+          class="table text-center border border-primary border-opacity-25"
+        >
+          <thead>
+            <tr>
+              <td>Index</td>
+              <td>Website Name</td>
+              <td>Visit</td>
+              <td>Delete</td>
+            </tr>
+          </thead>
+          <tbody id="sites"></tbody>
+        </table>
+        <div
+          class="lightBoxContainer d-none d-flex justify-content-center align-items-center"
+          id="lightBoxContainer"
+        >
+          <div class="lightBox bg-white rounded-4" id="lightBox">
+            <div class="d-flex p-4">
+              <div class="item1 rounded-circle me-2"></div>
+              <div class="item2 rounded-circle me-2"></div>
+              <div class="item3 rounded-circle me-2"></div>
+            </div>
+
+            <h3 class="h5 px-4">
+              Site Name or Url is not valid, Please follow the rules below :
+            </h3>
+            <p class="px-4 fs-5">
+              <i class="fa-regular fa-circle-right p-2 text-danger"></i>Site
+              name must contain at least 3 characters
+            </p>
+            <p class="px-4 fs-5">
+              <i class="fa-regular fa-circle-right p-2 text-danger"></i>Site URL
+              must be a valid one
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

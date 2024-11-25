@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #faefdc;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+  isolation: isolate;
+}
+.home hr {
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: black;
+}
+p {
+  font-size: 1rem;
+  color: #777;
+}
+
+h2 {
+  font-size: 25px;
+  color: #3ca55c;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+button.btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.lightBoxContainer .lightBox .item3 {
+  width: 20px;
+  height: 20px;
+  background-color: #4db748;
+}
